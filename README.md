@@ -1,6 +1,12 @@
 # nvim_config
 Neovim configuration (uses NVChad as base)
 
+# Remove old nvim config
+```
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+```
+
 # Base setup nvchad
 see https://nvchad.com/docs/quickstart/install
 
