@@ -45,13 +45,7 @@ M.trouble = {
     ["<leader>xd"] = {
       function() require("trouble").toggle("document_diagnostics") end,
       "Toggle trouble document diagnostics window"
-    }
-  }
-}
-
-M.todo = {
-  plugin = true,
-  n = {
+    },
     ["<leader>xt"] = {
       "<cmd> TodoTrouble <CR>",
       "Todo trouble window"

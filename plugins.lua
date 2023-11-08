@@ -115,9 +115,6 @@ local plugins = {
     lazy = false,
     config = function()
       require("todo-comments").setup()
-    end,
-    init = function()
-      require("core.utils").load_mappings("todo")
     end
   },
   {
