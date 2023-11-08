@@ -37,6 +37,14 @@ M.trouble = {
     ["<leader>xq"] = {
       function() require("trouble").toggle("quickfix") end,
       "Toggle trouble quickfix window"
+    },
+    ["<leader>xw"] = {
+      function() require("trouble").toggle("workspace_diagnostics") end,
+      "Toggle trouble workspace diagnostics window"
+    },
+    ["<leader>xd"] = {
+      function() require("trouble").toggle("document_diagnostics") end,
+      "Toggle trouble document diagnostics window"
     }
   }
 }
