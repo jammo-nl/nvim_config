@@ -35,7 +35,8 @@ local plugins = {
         "vue-language-server",
         "pyright",
         "html-lsp",
-        "css-lsp"
+        "css-lsp",
+        "gopls"
       },
     },
   },
