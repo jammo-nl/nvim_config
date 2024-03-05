@@ -7,7 +7,6 @@ return {
     -- refer to the configuration section below
   },
   config = function()
-    vim.keymap.set('n', '<leader>t', ':TodoQuickFix<CR>', { silent = true })
     require('todo-comments').setup()
   end,
 }
