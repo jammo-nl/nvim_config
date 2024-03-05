@@ -577,17 +577,20 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
-        
+
         rust_analyzer = {
-            settings = {
-                ["rust-analyzer"] = {
-                    procMacro = {
-                        attributes = {
-                            enable = false,
-                        },
-                    },
-                }
-            }
+          settings = {
+            ['rust-analyzer'] = {
+              procMacro = {
+                attributes = {
+                  enable = false,
+                },
+              },
+              checkOnSave = {
+                command = 'clippy',
+              },
+            },
+          },
         },
         lua_ls = {
           -- cmd = {...},
