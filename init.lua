@@ -90,6 +90,10 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Set the tabstop size
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
