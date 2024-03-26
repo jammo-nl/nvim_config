@@ -590,10 +590,7 @@ require('lazy').setup({
                 attributes = {
                   enable = false,
                 },
-              },
-              checkOnSave = {
-                command = 'clippy',
-              },
+              }
             },
           },
         },
