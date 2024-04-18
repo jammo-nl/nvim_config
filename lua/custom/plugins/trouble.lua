@@ -16,10 +16,10 @@ return {
     vim.keymap.set('n', '<leader>tt', function()
       require('trouble').toggle 'todo'
     end, { desc = 'Toggle todo' })
-    vim.keymap.set('n', '<leader>tn', function()
+    vim.keymap.set('n', 'tn', function()
       require('trouble').next { skip_groups = true, jump = true }
     end, { desc = 'Jumpt to next item' })
-    vim.keymap.set('n', '<leader>tp', function()
+    vim.keymap.set('n', 'tp', function()
       require('trouble').previous { skip_groups = true, jump = true }
     end, { desc = 'Jumpt to previous item' })
   end,
