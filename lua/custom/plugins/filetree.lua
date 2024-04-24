@@ -16,7 +16,7 @@ return {
     vim.fn.sign_define('DiagnosticSignInfo', { text = ' ', texthl = 'DiagnosticSignInfo' })
     vim.fn.sign_define('DiagnosticSignHint', { text = '󰌵', texthl = 'DiagnosticSignHint' })
 
-    vim.keymap.set('n', '<leader>n', ':Neotree toggle<CR>', { silent = true })
+    vim.keymap.set('n', '<leader>tn', ':Neotree toggle<CR>', { silent = true })
 
     require('neo-tree').setup {
       close_if_last_window = true,
