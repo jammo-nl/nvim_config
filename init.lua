@@ -290,7 +290,7 @@ require('lazy').setup({
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-	['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
       }
       -- visual mode
@@ -571,9 +571,9 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
-	goimports = {},
-	html = {},
-	cssls = {},
+        goimports = {},
+        html = {},
+        cssls = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -592,7 +592,7 @@ require('lazy').setup({
                 attributes = {
                   enable = false,
                 },
-              }
+              },
             },
           },
         },
@@ -854,7 +854,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'javascript', 'css', 'rust', 'go' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
