@@ -1,5 +1,16 @@
 return {
   {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      vim.filetype.add {
+        pattern = {
+          ['.*%.blade%.php'] = 'blade',
+        },
+      }
+    end,
+  },
+
+  {
     'neovim/nvim-lspconfig',
     opts = {
       servers = {
@@ -51,29 +62,10 @@ return {
     opts = {
       features = {
         pickers = {
-          provider = 'snacks', -- "snacks | telescope | fzf-lua | ui-select"
+          provider = 'snacks',           -- "snacks | telescope | fzf-lua | ui-select"
         },
       },
     },
   },
 
-  -- 2. Treesitter support voor Blade templates
-  {
-    'nvim-treesitter/nvim-treesitter',
-    opts = function(_, opts)
-      if type(opts.ensure_installed) == 'table' then vim.list_extend(opts.ensure_installed, { 'php', 'blade', 'phpdoc' }) end
-    end,
-  },
-
-  -- 3. Zorg dat Blade bestanden herkend worden als blade type
-  {
-    'nvim-treesitter/nvim-treesitter',
-    config = function()
-      vim.filetype.add {
-        pattern = {
-          ['.*%.blade%.php'] = 'blade',
-        },
-      }
-    end,
-  },
 }

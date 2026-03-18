@@ -1,13 +1,4 @@
 return {
-  -- 1. Treesitter voor Python
-  {
-    'nvim-treesitter/nvim-treesitter',
-    opts = function(_, opts)
-      if type(opts.ensure_installed) == 'table' then vim.list_extend(opts.ensure_installed, { 'python', 'ninja', 'rst' }) end
-    end,
-  },
-
-  -- 2. LSP Setup
   {
     'neovim/nvim-lspconfig',
     opts = {
