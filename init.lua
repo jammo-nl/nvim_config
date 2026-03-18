@@ -496,7 +496,6 @@ require('lazy').setup({
       },
       -- Maps LSP server names between nvim-lspconfig and Mason package names.
       'mason-org/mason-lspconfig.nvim',
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -654,8 +653,6 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         -- You can add other tools here that you want Mason to install
       })
-
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       for name, server in pairs(servers) do
         vim.lsp.config(name, server)
@@ -953,6 +950,12 @@ require('lazy').setup({
 --
 vim.api.nvim_create_autocmd('VimEnter', {
   callback = function()
-    if vim.fn.argc() == 0 and vim.fn.line2byte(vim.fn.line '$') == -1 then vim.cmd 'Neotree show' end
+    -- Controleer of Neovim wordt geopend zonder bestanden
+    if vim.fn.argc() == 0 and vim.fn.line2byte(vim.fn.line '$') == -1 then
+      -- Forceer Lazy om de plugin nu te laden
+      require('lazy').load { plugins = { 'neo-tree.nvim' } }
+      -- Voer het commando uit
+      vim.cmd 'Neotree show'
+    end
   end,
 })
