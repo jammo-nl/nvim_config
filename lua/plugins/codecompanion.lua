@@ -23,6 +23,7 @@ return {
             env = { api_key = 'XAI_API_KEY' }, -- environment variable moet bestaan
             schema = { model = { default = 'grok-code-fast-1' } },
             opts = { model = 'grok-code-fast-1' },
+            supports_tools = true,
           })
         end,
       },
